@@ -1,0 +1,220 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #003366; /* Azul FITO */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #ffcc00; /* Amarelo FITO */
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Botão de Modo Noturno do JavaScript */
+#botao-tema {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    padding: 8px 15px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #003366;
+    transition: 0.2s;
+}
+
+#botao-tema:hover {
+    background-color: white;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #222;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+/* Área de Notícias */
+main {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.noticia-destaque {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+.noticia-destaque img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.noticia-destaque h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.data-noticia {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Grade de Notícias Menores */
+.grid-noticias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.noticia-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    border-top: 4px solid #003366;
+}
+
+.noticia-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Barra Lateral */
+aside {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+aside h3 {
+    color: #003366;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+aside a {
+    color: #003366;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* CLASSES ESPECIAIS DO JAVASCRIPT (MODO NOTURNO) */
+body.modo-escuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.modo-escuro main, body.modo-escuro aside {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+body.modo-escuro .noticia-card {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+body.modo-escuro .noticia-destaque h2, body.modo-escuro aside h3 {
+    color: #ffcc00;
+}
+
+body.modo-escuro aside a {
+    color: #ffcc00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .grid-noticias {
+        grid-template-columns: 1fr;
+    }
+    #botao-tema {
+        position: static;
+        margin-top: 10px;
+    }
+}
